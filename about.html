@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></i>About | Royal</title>
+    <!--<link rel="stylesheet" href="aboutusCss.css" />-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <style>
+        .bg {
+            width: 100%;
+            height: 100vh;
+            background: url("img/about.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: top;
+            position: relative;
+            text-align: center;
+        }
+        
+        .nav {
+            width: 100%;
+            height: auto;
+            font-family: 'Josefin Sans';
+            background-color: transparent;
+            border-bottom: 1px solid #ffffff;
+            padding: 5px;
+            transition: 0.5s;
+            display: flex;
+            justify-content: space-around;
+            background-color: #454b5450;
+        }
+        
+        .nav a {
+            color: #ffffff;
+        }
+        
+        .nav:hover {
+            background-color: #ffffff;
+        }
+        
+        .nav:hover a {
+            color: #000000;
+        }
+        
+        .nav:hover .nav-left div i {
+            color: #d4b862;
+        }
+        
+        .nav-left div i {
+            color: #ffffff;
+        }
+        
+        .nav-left {
+            width: 300px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-left div {
+            font-size: 30px;
+            margin-right: 10px;
+        }
+        
+        .nav-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .left-text {
+            width: 50%;
+            background-color: transparent;
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            text-align: left;
+            text-shadow: 1px 1px #ffffff;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+        
+        a.name {
+            font-family: 'Dancing Script';
+            font-weight: bold;
+            font-size: 46px;
+        }
+        
+        a.about {
+            float: right;
+            font-size: 16px;
+            margin-left: 17px;
+            padding: 3px;
+        }
+        
+        a,
+        a:hover,
+        a:focus,
+        a:active {
+            text-decoration: none;
+            outline: none;
+        }
+        
+        a,
+        a:active,
+        a:focus {
+            color: #6f6f6f;
+            text-decoration: none;
+            transition-timing-function: ease-in-out;
+            -ms-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -webkit-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-duration: 0.2s;
+            -ms-transition-duration: 0.2s;
+            -moz-transition-duration: 0.2s;
+            -webkit-transition-duration: 0.2s;
+            -o-transition-duration: 0.2s;
+        }
+        
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        section {
+            padding: 60px 0;
+            /* min-height: 100vh;*/
+        }
+        
+        .sec-title {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 60px;
+        }
+        
+        .sec-title .title {
+            position: relative;
+            display: block;
+            font-size: 18px;
+            line-height: 24px;
+            color: #454b54;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .sec-title h2 {
+            position: relative;
+            display: block;
+            font-size: 40px;
+            line-height: 1.28em;
+            color: #222222;
+            font-weight: 600;
+            padding-bottom: 18px;
+        }
+        
+        .sec-title h2:before {
+            position: absolute;
+            content: "";
+            left: 0px;
+            bottom: 0px;
+            width: 50px;
+            height: 3px;
+            background-color: #d1d2d6;
+        }
+        
+        .sec-title .text {
+            position: relative;
+            font-size: 16px;
+            line-height: 26px;
+            color: #848484;
+            font-weight: 400;
+            margin-top: 35px;
+        }
+        
+        .sec-title.light h2 {
+            color: #ffffff;
+        }
+        
+        .sec-title.text-center h2:before {
+            left: 50%;
+            margin-left: -25px;
+        }
+        
+        .list-style-one {
+            position: relative;
+        }
+        
+        .list-style-one li {
+            position: relative;
+            font-size: 16px;
+            line-height: 26px;
+            color: #222222;
+            font-weight: 400;
+            padding-left: 35px;
+            margin-bottom: 12px;
+        }
+        
+        .list-style-one li:before {
+            content: "\f058";
+            position: absolute;
+            left: 0;
+            top: 0px;
+            display: block;
+            font-size: 18px;
+            padding: 0px;
+            color: #454b54;
+            font-weight: 600;
+            -moz-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1.6;
+            font-family: "Font Awesome 5 Free";
+        }
+        
+        .list-style-one li a:hover {
+            color: #44bce2;
+        }
+        
+        .btn-style-one {
+            position: relative;
+            display: inline-block;
+            font-size: 17px;
+            line-height: 30px;
+            color: #ffffff;
+            padding: 10px 30px;
+            font-weight: 600;
+            overflow: hidden;
+            letter-spacing: 0.02em;
+            background-color: #454b54;
+        }
+        
+        .btn-style-one:hover {
+            background-color: #001e57;
+            color: #ffffff;
+        }
+        
+        .about-section {
+            position: relative;
+            padding: 120px 0 70px;
+        }
+        
+        .about-section .sec-title {
+            margin-bottom: 45px;
+        }
+        
+        .about-section .content-column {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        
+        .about-section .content-column .inner-column {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .about-section .text {
+            margin-bottom: 40px;
+            font-size: 16px;
+            line-height: 26px;
+            color: #848484;
+            font-weight: 400;
+        }
+        
+        .about-section .list-style-one {
+            margin-bottom: 45px;
+        }
+        
+        .about-section .btn-box {
+            position: relative;
+        }
+        
+        .about-section .btn-box a {
+            padding: 15px 50px;
+        }
+        
+        .about-section .image-column {
+            position: relative;
+        }
+        
+        .about-section .image-column .text-layer {
+            position: absolute;
+            right: -110px;
+            top: 50%;
+            font-size: 325px;
+            line-height: 1em;
+            color: #ffffff;
+            margin-top: -175px;
+            font-weight: 500;
+        }
+        
+        .about-section .image-column .inner-column {
+            position: relative;
+            padding-left: 120px;
+            padding-bottom: 125px;
+            margin-bottom: 100px;
+        }
+        
+        .about-section .image-column .inner-column:before {
+            position: absolute;
+            left: -75px;
+            top: 65px;
+            height: 520px;
+            width: 520px;
+            background-image: url(https://i.ibb.co/fxJ1jtC/about-circle-1.png);
+            content: "";
+        }
+        
+        .about-section .image-column .image-1 {
+            position: relative;
+        }
+        
+        .about-section .image-column .image-2 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        
+        .about-section .image-column .image-2 img,
+        .about-section .image-column .image-1 img {
+            box-shadow: 0 30px 50px rgba(8, 13, 62, 0.15);
+        }
+        
+        .about-section .image-column .video-link {
+            position: absolute;
+            left: 70px;
+            top: 170px;
+        }
+        
+        .about-section .image-column .video-link .link {
+            position: relative;
+            display: block;
+            font-size: 22px;
+            color: #191e34;
+            font-weight: 400;
+            text-align: center;
+            height: 100px;
+            width: 100px;
+            line-height: 100px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 30px 50px rgba(8, 13, 62, 0.15);
+            -webkit-transition: all 300ms ease;
+            -moz-transition: all 300ms ease;
+            -ms-transition: all 300ms ease;
+            -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+        }
+        
+        .about-section .image-column .video-link .link:hover {
+            background-color: #191e34;
+            color: #fff;
+        }
+        /* .footer-one {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            background: #454b54;
+            height: 100px;
+            color: #ffffff;
+        } */
+        
+        .footer-one p {
+            width: 60%;
+            margin: auto;
+        }
+        
+        .footer-one,
+        .footer-two {
+            margin: auto;
+            width: 100%;
+            text-align: center;
+            background: #454b54;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        
+        .footer-two p a {
+            color: #ffffff;
+        }
+        
+        .footer-two p a:hover {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="nav" id="nav-bar">
+            <div class="nav-left">
+                <div><i class="fa-regular fa-chess-queen"></i></div>
+                <a class="name" href="index.php">Royal</a>
+            </div>
+            <div class="nav-right">
+                <a class="about " href="index.php">HOME</a>
+                <a class="about" href="about.html">ABOUT US</a>
+                <a class="about" href="contact.php">CONTACT US</a>
+                <a class="about" href="facilities.html">FACILITIES</a>
+            </div>
+        </div>
+        <div class="left-text">
+            <p style="width: 90px; font-size: 20px; border-bottom: 1px solid #ffffff; padding-bottom: 10px">Our Story
+                <p>
+                    <p style="font-size:50px;">Pioneers of Hospitality</p>
+        </div>
+    </div>
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+                    <div class="inner-column">
+                        <div class="sec-title">
+                            <!-- <span class="title">About Hotel</span> -->
+                            <h2>Pioneers of <br /> Hospitality</h2>
+                        </div>
+                        <div class="text">
+                            A former residence of Prince Roland Bonaparte and listed in the French “Monuments Historiques”, Shangri-La Hotel, Paris is a hotel palace located across the Seine and facing the Eiffel Tower. It reflects both Asian hospitality and French art de viver.
+                            It has 2 restaurants and 1 of which has a Michelin star. An indoor pool and a spa are featured. Place Trocadero can be found 1640 feet away. Some rooms and suites at Shangri-La Hotel, Paris offer stunning and unique views of
+                            the Eiffel Tower. Apart from the Signature Suites, all rooms and suites are decorated in shades of blue, white and ecru, in keeping with both European Empire and Asian aesthetics. All rooms have a separate living room with
+                            desk and a marble bathroom with heated flooring, separate bath and rainfall shower and Guerlain toiletries. The rooms and suites feature custom-made furniture with crystal finishing. A flat-screen TV with in-house movie channels,
+                            an iPod dock and a laptop safe are provided. Two restaurants, overseen by the Michelin starred Chef Christophe Moret, offer both a French and Asian cuisine including the France only Chinese Michelin star restaurant “Le Shang
+                            Palace”. Guests can enjoy breakfast, lunch and dinner in the glass-roofed dining room. Le Bar Botaniste provides rare botanical spirits to match with a large menu of cocktail creations and liquors. Its four historical reception
+                            rooms can welcome prestigious events and weddings. Shangri-La Hotel, Paris offers wellness and leisure services which include an indoor swimming pool and fitness room bathed with natural daylight. The swimming pool is located
+                            in Roland Bonaparte’s former stables. A hammam and in-room relaxing spa experiences are available. Guests can also enjoy the historic billiard room with complete with a fireplace. An airport shuttle is available at Shangri-La
+                            Hotel, Paris. Iena Metro Station is just 328 feet away, while the prestigious avenue Montaigne and the Champs-Elysées are both 0.7 mi from the property. Parc des Princes Stadium is located 3.1 mi from Shangri-La while Orly
+                            Airport is 12 mi away.
+                        </div>
+                        <ul class="list-style-one">
+                            <li>A Trusted Partner</li>
+                            <li>Leading for Sustainable Growth</li>
+                            <li>Bringing Positive Impact</li>
+                        </ul>
+                        <div class="btn-box">
+                            <a href="contact.php" class="theme-btn btn-style-one">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column wow fadeInLeft">
+                        <figure class="image-1">
+                            <a href="#" class="lightbox-image" data-fancybox="images"><img src="img/san+regis+paris.jpg" alt="" /></a>
+                        </figure>
+                        <figure class="image-2">
+                            <a href="#" class="lightbox-image" data-fancybox="images"><img src="img/ice-100053252-0746998_3XL-452362.jpg" alt="" /></a>
+                        </figure>
+                    </div>
+                    <div class="inner-column wow fadeInLeft">
+                        <figure class="image-1" style="right: 50%;">
+                            <a href="#" class="lightbox-image" data-fancybox="images"><img src="img/eiffel-tower-views-tour-montparnasse-paris-france.jpg" alt="" /></a>
+                        </figure>
+                        <!-- <figure class="image-2" style="left: 0%; top: 50%" ;>
+                            <a href="#" class="lightbox-image" data-fancybox="images"><img src="img/ice-100053252-0746998_3XL-452362.jpg" alt="" /></a>
+                        </figure> -->
+                        <figure class="image-3" style="position:absolute; left: 40%; top: 40%;">
+                            <a href="#" class="lightbox-image" data-fancybox="images"><img src="img/about-1.jpg" alt="" /></a>
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer style="margin-top: 100px">
+        <div class="footer-one">
+            <p style="margin:0px">The Shangri-La Group refers to Shangri-La Asia Limited and its subsidiaries and affiliates. Shangri-La Asia Limited is listed on the Main Board of the Stock Exchange of Hong Kong Limited (Stock code - 69).</p>
+        </div>
+        <div class="footer-two">
+            <p style="margin:0px">
+                <a href="">Privacy Policy</a> |
+                <a href="">Terms & Conditions</a> |
+                <a href="">Safety & Security</a> |
+                <a href="">Supplier Code Of Conduct</a>
+            </p>
+            <p style="margin:0px">© 2022 Royal International Hotel Management Ltd. All Rights Reserved. ICP license: 17055189
+            </p>
+        </div>
+        <div class="footer-three" style="height: 50px; background-color: #454b54;"></div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,505 @@
+<html>
+
+<head>
+    <title>Facilities | Royal</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family: "Poppins", sans-serif; */
+        }
+        
+        .bg {
+            width: 100%;
+            height: 100vh;
+            background: url("img/services.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: top;
+            position: relative;
+            text-align: center;
+        }
+        
+        .nav {
+            width: 100%;
+            height: auto;
+            font-family: 'Josefin Sans';
+            background-color: transparent;
+            border-bottom: 1px solid #ffffff;
+            padding: 5px;
+            transition: 0.5s;
+            display: flex;
+            justify-content: space-around;
+            background-color: #454b5450;
+        }
+        
+        .nav a {
+            color: #ffffff;
+        }
+        
+        .nav:hover {
+            background-color: #ffffff;
+        }
+        
+        .nav:hover a {
+            color: #000000 !important;
+        }
+        
+        .nav:hover .nav-left div i {
+            color: #d4b862;
+        }
+        
+        .nav-left div i {
+            color: #ffffff;
+        }
+        
+        .nav-left {
+            width: 300px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-left div {
+            font-size: 30px;
+            margin-right: 10px;
+        }
+        
+        .nav-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+        
+        a.name {
+            font-family: 'Dancing Script';
+            font-weight: bold;
+            font-size: 46px;
+        }
+        
+        a.about {
+            float: right;
+            font-size: 16px;
+            margin-left: 17px;
+            padding: 3px;
+        }
+        
+        .center-text {
+            width: 75%;
+            background-color: transparent;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        
+        #service {
+            /* position: absolute;
+            width: 80%;
+            left: 10%;
+            top: 100%; */
+            height: auto;
+            padding-top: 30px;
+            position: relative;
+        }
+        
+        a,
+        a:hover,
+        a:focus,
+        a:active {
+            text-decoration: none;
+            outline: none;
+        }
+        /* a,
+        a:active,
+        a:focus {
+            color: #6f6f6f;
+            text-decoration: none;
+            transition-timing-function: ease-in-out;
+            -ms-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -webkit-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-duration: 0.2s;
+            -ms-transition-duration: 0.2s;
+            -moz-transition-duration: 0.2s;
+            -webkit-transition-duration: 0.2s;
+            -o-transition-duration: 0.2s;
+        } */
+        
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .section_title {
+            margin-bottom: 40px;
+        }
+        
+        .section_title h2 {
+            color: #333333;
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+        }
+        
+        .brand_border .fa.fa-minus {
+            color: #fff;
+            font-size: 8px;
+            height: 2px;
+            background: #49535d none repeat scroll 0 0;
+            width: 100px;
+        }
+        
+        .brand_border .fas.fa-handshake {
+            font-size: 14px;
+            color: #000000;
+        }
+        
+        .section_title p {
+            color: #333333;
+            font-size: 14px;
+            line-height: 25px;
+            padding: 14px 0;
+        }
+        
+        .choose_us .section_title {
+            margin-top: 45px;
+        }
+        
+        #service .single_service {
+            height: 200px;
+            padding: 32px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+        
+        #service .single_service:hover {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        #service .icon {
+            border: 0px solid #666;
+            border-radius: 5%;
+            color: #333333;
+            font-size: 35px;
+            line-height: 65px;
+            overflow: hidden;
+            text-align: center;
+            text-decoration: none;
+            width: 70px;
+        }
+        
+        #service .single_service .single_service-left {
+            padding-right: 25px;
+        }
+        
+        .single_service-heading {
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #000;
+        }
+        
+        .single_service-body p {
+            font-size: 13px;
+            line-height: 25px;
+        }
+        
+        .single_service-left {
+            display: table-cell;
+            vertical-align: top;
+        }
+        
+        .single_service-body {
+            color: #333333;
+            display: table-cell;
+            vertical-align: top;
+        }
+        
+        .hvr-curl-top-right {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px transparent;
+            position: relative;
+        }
+        
+        #service .single_service:hover {
+            background: #49535d none repeat scroll 0 0;
+        }
+        
+        #service .single_service:hover .icon i,
+        #service .single_service:hover .single_service-heading,
+        #service .single_service:hover .single_service-body p {
+            color: #ffffff;
+        }
+        
+        .footer {
+            width: 100%;
+            height: auto;
+            background-color: #e0e0e0;
+        }
+        
+        .footer-one {
+            display: flex;
+            color: #454b54;
+            justify-content: space-around;
+            align-items: baseline;
+        }
+        
+        .left,
+        .center,
+        .right {
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .social-icons {
+            display: flex;
+            align-items: center;
+        }
+        
+        .social-icons div {
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .social-icons div i {
+            color: #454b54;
+        }
+        
+        .footer-two {
+            margin: auto;
+            width: 100%;
+            text-align: center;
+            background: #454b54;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        /* .footer-two p a {
+            color: #ffffff;
+        } */
+        
+        .footer-two p a:hover {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="nav">
+            <div class="nav-left">
+                <div><i class="fa-regular fa-chess-queen"></i></div>
+                <a class="name" href="index.php">Royal</a>
+            </div>
+            <div class="nav-right">
+                <a class="about " href="index.php">HOME</a>
+                <a class="about" href="about.html">ABOUT US</a>
+                <a class="about" href="contact.php">CONTACT US</a>
+                <a class="about" href="facilities.html">FACILITIES</a>
+            </div>
+        </div>
+        <div class="center-text">
+            <p style="font-size:50px; text-shadow: 1px 1px #000000; font-family: 'Playfair Display', serif;">Services & Facilities
+                <p>
+        </div>
+    </div>
+    <div id="service">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section_title text-center">
+                        <h2>Our Services</h2>
+                        <div class="brand_border">
+                            <i class="fa fa-minus" aria-hidden="true"></i>
+                            <i class="fa-solid fa-hotel"></i>
+                            <i class="fa fa-minus" aria-hidden="true"></i>
+                        </div>
+                        <p>
+                            We are geared towards the fulfilment of the needs of any discerning guest and <br />below you can see the most commonly-used services and facilities offered by our boutique hotel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!--START SINGLE SERVICE AREA-->
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                    <div class="single_service hvr-curl-top-right">
+                        <div class="single_service-left">
+                            <div class="icon">
+                                <i class="fa-solid fa-wifi"></i>
+                            </div>
+                        </div>
+                        <div class="single_service-body">
+                            <h4 class="single_service-heading">Free Wifi</h4>
+                            <p>
+                                Our free WiFi internet service is available 24-hours. Stay Happy, Stay connected with us.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--/END SINGLE SERVICE AREA-->
+                <!--START SINGLE SERVICE AREA-->
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                    <div class="single_service hvr-curl-top-right">
+                        <div class="single_service-left">
+                            <div class="icon">
+                                <i class="fa-solid fa-square-parking"></i>
+                            </div>
+                        </div>
+                        <div class="single_service-body">
+                            <h4 class="single_service-heading">Car Parking</h4>
+                            <p>
+                                Secure on-site car parking is available,so leave the car with us and take advantage of our great value Stay offers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--/END SINGLE SERVICE AREA-->
+                <!--START SINGLE SERVICE AREA-->
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                    <div class="single_service hvr-curl-top-right">
+                        <div class="single_service-left">
+                            <div class="icon">
+                                <i class="fa-solid fa-person-swimming"></i>
+                            </div>
+                        </div>
+                        <div class="single_service-body">
+                            <h4 class="single_service-heading">Swimming Pool</h4>
+                            <p>
+                                There is also swimming pool to reduce your fatigue.So, swim your worries away.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--/END SINGLE SERVICE AREA-->
+                <!--START SINGLE SERVICE AREA-->
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                    <div class="single_service hvr-curl-top-right">
+                        <div class="single_service-left">
+                            <div class="icon">
+                                <i class="fa-sharp fa-solid fa-martini-glass-citrus"></i>
+                            </div>
+                        </div>
+                        <div class="single_service-body">
+                            <h4 class="single_service-heading">Bar</h4>
+                            <p>
+                                We bring people together with perfectly crafted hotel drinks and genuine hospitality in a modern cocktail bar setting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--/END SINGLE SERVICE AREA-->
+                <!--START SINGLE SERVICE AREA-->
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                    <div class="single_service hvr-curl-top-right">
+                        <div class="single_service-left">
+                            <div class="icon">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                        </div>
+                        <div class="single_service-body">
+                            <h4 class="single_service-heading">Breakfast</h4>
+                            <p>
+                                Breakfast is also served as a buffet. Say good morning to your body, eat breakfast.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--/END SINGLE SERVICE AREA-->
+                <!--START SINGLE SERVICE AREA-->
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                    <div class="single_service hvr-curl-top-right">
+                        <div class="single_service-left">
+                            <div class="icon">
+                                <i class="fa-solid fa-taxi"></i>
+                            </div>
+                        </div>
+                        <div class="single_service-body">
+                            <h4 class="single_service-heading">Taxi Service</h4>
+                            <p>
+                                There is also Taxi Service to get you where you want to go easily and safe.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--/END SINGLE SERVICE AREA-->
+            </div>
+        </div>
+    </div>
+    <!--/END SERVICE AREA-->
+    <div class="footer">
+        <div class="footer-one">
+            <div class="left">
+                <h5>Royal Paris</h5>
+                <p>Address: 10, avenue d'Iéna, Paris 75116 France<br> Phone: +0098 9893 5647, +0096 3434 5678<br> E-mail: RoyalParis@gmail.com
+                </p>
+            </div>
+            <div class="center">
+                <h5>Check-in / Check-out</h5>
+                <p>We hope you've enjoyed your stay from start to finish.<br> Please note the check-in / out times below:</p>
+                <p>Check-in: 8AM<br> Check-out: 10AM</p>
+            </div>
+            <div class="right">
+                <h5>Royal Circle App</h5>
+                <p>Stay, Dine, Shop Anytime Anywhere</p>
+                <div class="social-icons">
+                    <div><a href="https://www.facebook.com/royalhotelparis/"><i class="fa-brands fa-facebook"></i></a></div>
+                    <div><a href="https://mobile.twitter.com/royalhotelparis"><i class="fa-brands fa-twitter"></i></a></div>
+                    <div><a href="https://www.instagram.com/explore/locations/5918053/royal-hotel-de-paris/"><i class="fa-brands fa-instagram"></i></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-two">
+            <p style="margin:0px">
+                <a href="">Privacy Policy</a> |
+                <a href="">Terms & Conditions</a> |
+                <a href="">Safety & Security</a> |
+                <a href="">Supplier Code Of Conduct</a>
+            </p>
+            <p style="margin:0px">© 2022 Royal International Hotel Management Ltd. All Rights Reserved. ICP license: 17055189
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
