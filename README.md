@@ -3,7 +3,8 @@
 
 - 🌱 I’m currently learning php laravel framework
 - 💞️ I’m looking to collaborate on web development.
-- 📫 aamk11522@gmail.com
+- 📫 admin username-admin
+-     admin password-admin123
 
 <!---
 aamk-creator/aamk-creator is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
